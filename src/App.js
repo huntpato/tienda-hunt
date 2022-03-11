@@ -1,10 +1,11 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import Routesapp from './components/Routesapp/Routesapp';
+
 
 function App() {
   return (
     <div>
-      <NavBar/>
+      <Routesapp/>
     </div>
   );
 }

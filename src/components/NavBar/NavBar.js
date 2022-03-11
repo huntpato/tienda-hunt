@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logoViveruski.png'
+import CartWidget from '../CartWidget/CartWidget';
 import styles from './NavBar.module.css'
 
 const NavBar = () => {
@@ -15,7 +16,7 @@ const NavBar = () => {
                     <li><a href=''>Suculentas</a></li>
                     <li><a href=''>Cactus</a></li>
                 </ul>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <CartWidget/>
             </nav>
         </div>
         
