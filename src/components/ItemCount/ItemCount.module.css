@@ -1,0 +1,36 @@
+
+.container{
+    display:flex;
+    flex-direction: column;
+}
+
+.countContainer{
+    background-color: var(--lightGreen);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    margin-bottom: 4px;
+}
+
+button{
+    border: none;
+    background-color: var(--green);
+    border-radius: 25px;
+    padding: 6px 10px 8px 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+button:disabled{
+    background-color: var(--lightGreen);
+    color:var(--green);
+}
+
+.countContainer button{
+    padding: 5px 10px;
+}
