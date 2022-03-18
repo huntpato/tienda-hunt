@@ -15,10 +15,13 @@
     margin-bottom: 4px;
 }
 
-button{
+/********** buttons ***********/
+
+.container button{
     border: none;
     background-color: var(--green);
     border-radius: 25px;
+    cursor: pointer;
     padding: 6px 10px 8px 10px;
     color: white;
     font-size: 0.9rem;
@@ -26,7 +29,7 @@ button{
     text-align: center;
 }
 
-button:disabled{
+.container button:disabled{
     background-color: var(--lightGreen);
     color:var(--green);
 }
