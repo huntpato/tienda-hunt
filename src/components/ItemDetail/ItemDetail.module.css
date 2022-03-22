@@ -1,0 +1,54 @@
+/********** card container ***********/
+.container{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 9px 1px rgba(130,130,130,0.15);
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height: 450px;
+    padding: 20px;
+}
+
+.detailcard__title{
+    color:var(--pink);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    margin: 0px 0px 15px 0px; /*borrar despues*/
+}
+
+.detailcard{  
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    padding: 0px 30px 0px 20px; 
+}
+
+/********** title ***********/
+
+.detailcard h6{
+    color:var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+/********** parragraph ***********/
+
+.detailcard__description{
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.detailcard__price{
+    color: var(--main-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/********** images ***********/
+
+.detailcard__images{
+    width: 50%;
+    object-fit: cover;
+}

@@ -3,9 +3,14 @@
 * {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
 }
+
+/* body{
+  background-color: #252525;
+} */
 
 :root{
     --main-color: #252525;
@@ -14,7 +19,7 @@
     --green: #04D89D;
     --lightGreen: #d3f7ec;
     --yellow: #FDC800;
-    --grey: #F2F2F2;
+    --grey: #f5f5f5;
 }
 
 

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import {MdShoppingCart} from 'react-icons/md'
 
 const CartWidget = () => {
+
+  const styleIcon = { color: "white", fontSize: "1.5em" }
+
   return (
     <>
-        <i className="fa-solid fa-cart-shopping"></i>
+        <MdShoppingCart style={styleIcon}/>
     </>
   )
 }
