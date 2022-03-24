@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
   
     useEffect(() => {
       getFetch
-        .then((resp) => setProduct(resp.find(p => p.id === 1)))
+        .then((resp) => setProduct(resp.find(p => p.id === '1')))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }, []);

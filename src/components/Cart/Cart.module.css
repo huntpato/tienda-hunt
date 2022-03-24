@@ -2,16 +2,10 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    /* justify-content: center; */
     width: 90vw;
     margin:0 auto;
     position:relative;
     top:120px; 
-    margin-bottom: 160px;  
-}
-
-.title{
-    color:var(--green);
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
+    margin-bottom: 140px;  
 }

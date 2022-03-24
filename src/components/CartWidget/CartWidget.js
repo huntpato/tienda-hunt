@@ -1,5 +1,6 @@
 import React from 'react';
 import {MdShoppingCart} from 'react-icons/md'
+import styles from './CartWidget.module.css'
 
 const CartWidget = () => {
 
@@ -7,7 +8,7 @@ const CartWidget = () => {
 
   return (
     <>
-        <MdShoppingCart style={styleIcon}/>
+        <MdShoppingCart className={styles.cart} style={styleIcon}/>
     </>
   )
 }

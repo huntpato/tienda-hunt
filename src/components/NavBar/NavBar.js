@@ -1,21 +1,22 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logoViveruski.png'
 import CartWidget from '../CartWidget/CartWidget';
+import MobileNavigation from './MobileNavigation';
 import styles from './NavBar.module.css'
+import Navigation from './Navigation';
 
 const NavBar = () => {
-    const {container, navContainer, logotype, nav__categories, nav__categoriesLinks} = styles;
+    const {container, navBar, navBar__logo} = styles;
 
     return (
         <div className = {container} >
-            <nav className={navContainer}>
-                <img src={logo} alt='Logotipo' className={logotype}/>
-                <ul className={nav__categories}>
-                    <li><a className={nav__categoriesLinks} href=''>Interior</a></li>
-                    <li><a className={nav__categoriesLinks} href=''>Exterior</a></li>
-                    <li><a className={nav__categoriesLinks} href=''>Suculentas</a></li>
-                    <li><a className={nav__categoriesLinks} href=''>Cactus</a></li>
-                </ul>
+            <nav className={navBar}>
+                <NavLink to= '/'>
+                    <img src={logo} alt='Logotipo' className={navBar__logo}/>
+                </NavLink>
+                <Navigation/>
+                <MobileNavigation/>
                 <CartWidget/>
             </nav>
         </div>

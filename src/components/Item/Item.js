@@ -12,7 +12,7 @@ const Item = ({ products }) => {
             <h6>{product.title}</h6>
             <img className={images} src={product.src} alt={product.pictureAlt}/>
             <p>$ {product.price}</p>
-            <button>Ver detalle del producto</button>
+            <button>Ver detalle</button>
           </div>
         );
       })}

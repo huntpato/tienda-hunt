@@ -9,7 +9,7 @@
     width:100%;
 }
 
-.navContainer{
+.navBar{
     width:90vw;
     display:flex;
     flex-direction: row;
@@ -20,24 +20,29 @@
 
 /********** logotype **********/
 
-.logotype{
+.navBar__logo{
     width:160px;
 }
 
-/********** categories **********/
+/********** links menu **********/
 
-.nav__categories{
+.navBar__links{
     display: grid;
     grid-template-columns: repeat(4,auto);
     gap: 0 10px;
     list-style: none;
 }
 
-.nav__categoriesLinks{
+.navBar__links a{
     text-decoration: none;
     color: white;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.navBar .mobileNavigation{
+    display:none;
+    background-color: aqua;
 }
 
 /********** queries **********/
@@ -48,21 +53,50 @@
 
 @media (max-width: 768px){
 
+    .navBar .navigation{
+        display:none;
+    }
+
+    /********** mobile menu **********/
+
+    .navBar .mobileNavigation{
+        display:flex;
+        align-items: flex-end;
+    }
+
+    .navBar .mobileNavigation .navBar__links{
+        background-color: var(--main-color);
+        border-top: 1px solid var(--green);
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        position:absolute;
+        top:9.5vh;
+        right:0;
+        width: 100%;
+    }
+
+    .navBar .mobileNavigation .navBar__links li{
+        padding: 20px 0px 25px 30px;
+    }
+
+    .navBar .mobileNavigation .burguer{
+        position: absolute;
+        right: 5%;
+        bottom: 13px;
+        cursor: pointer;
+    }
+
 }
 
 @media (max-width: 480px){
     
     /********** logotype **********/
     
-    .logotype{
+    .navBar__logo{
         width:80px;
     }
     
-    /********** categories **********/
-
-    .nav__categoriesLinks{
-        font-size: 0.6rem;
-        padding-left: 15px;
-    }
+    /********** links menu **********/
 
 }
