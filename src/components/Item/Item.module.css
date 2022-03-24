@@ -38,8 +38,7 @@
 
 /********** button ***********/
 
-.container button{
-    align-self: center;
+.container .product__detail{
     border:none;
     background-color:var(--green);
     border-radius: 25px;
@@ -48,9 +47,9 @@
     color: white;
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 5px;
     text-align: center;
-    width: 60%;
+    width: 100%;
+    margin-bottom: 2px;
 }
 
 /********** queries **********/

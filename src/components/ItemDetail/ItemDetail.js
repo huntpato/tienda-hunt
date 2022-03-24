@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from './ItemDetail.module.css'
+import styles from './ItemDetail.module.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({product}) => {
 
@@ -12,6 +13,7 @@ const ItemDetail = ({product}) => {
             <h6>{product.title}</h6>
             <p className={detailcard__description}>{product.description}</p>
             <p className={detailcard__price}>$ {product.price}</p>
+            <ItemCount stock = {5} initial = {1}/>
         </div>
         <img className={detailcard__images} src={product.src} alt={product.pictureAlt}/>
     </div>

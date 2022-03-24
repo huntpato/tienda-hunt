@@ -8,13 +8,12 @@ const ItemList = () => {
   const {container}=styles
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const {categoriaId} = useParams()
+  const {categoryId} = useParams()
 
   useEffect(() => {
-    if(categoriaId){
+    if(categoryId){
       getFetch
-      .then((resp) => setProducts(resp.filter(product => product.category === categoriaId)))
+      .then((resp) => setProducts(resp.filter(product => product.category === categoryId)))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
     } else{
@@ -23,7 +22,7 @@ const ItemList = () => {
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
     }
-  }, [categoriaId]);
+  }, [categoryId]);
 
   return(
       <div className={container}>

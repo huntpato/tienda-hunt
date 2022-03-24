@@ -15,10 +15,10 @@ const Routesapp = () => {
           element={<ItemListContainer greeting="* Bienvenido al viveruski *" />}
         />
         <Route
-          path="/categoria/:categoriaId"
+          path="/category/:categoryId"
           element={<ItemListContainer greeting="* Bienvenido al viveruski *" />}
         />
-        <Route path="/detalle/:detalleId" element={<ItemDetailContainer/>} />
+        <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
         <Route path="/carrito" element={<Cart/>}/>
       </Routes>
     </BrowserRouter>

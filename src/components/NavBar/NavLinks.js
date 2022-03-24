@@ -8,10 +8,10 @@ const NavLinks = () => {
   return (
     <>
         <ul className={navBar__links}>
-            <li><NavLink to="/categoria/interior">Interior</NavLink></li>
-            <li><NavLink to="/categoria/exterior">Exterior</NavLink></li>
-            <li><NavLink to="/categoria/suculentas">Suculentas</NavLink></li>
-            <li><NavLink to="/categoria/cactus">Cactus</NavLink></li>
+            <li><NavLink to="/category/interior">Interior</NavLink></li>
+            <li><NavLink to="/category/exterior">Exterior</NavLink></li>
+            <li><NavLink to="/category/suculentas">Suculentas</NavLink></li>
+            <li><NavLink to="/category/cactus">Cactus</NavLink></li>
         </ul>
     </>
   )

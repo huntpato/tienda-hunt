@@ -10,7 +10,7 @@
 /********** loading **********/
 
 .container h2{
-    grid-column: 2/3;
+    grid-column: 2/4;
     color: var(--main-color);
     font-size: 1.2rem;
     font-weight: 600;
