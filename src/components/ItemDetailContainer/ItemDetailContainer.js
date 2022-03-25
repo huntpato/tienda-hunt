@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
 
     const {itemId} = useParams()
-  
+    
     useEffect(() => {
       if(itemId){
         getFetch

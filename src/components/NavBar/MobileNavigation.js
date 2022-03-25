@@ -10,6 +10,8 @@ const MobileNavigation = () => {
 
   const [open, setOpen] = useState(false);
 
+  const closeMobileMenu = () => setOpen(false);
+
   return (
     <div className={mobileNavigation}>
     {
@@ -25,7 +27,7 @@ const MobileNavigation = () => {
             onClick={()=> setOpen(!open)}
         />
     }
-    {open && <NavLinks />}
+    {open && <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu}/>}
     </div>
   );
 };
