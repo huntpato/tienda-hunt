@@ -1,6 +1,12 @@
+.cart{
+    position:relative;
+    top:5px;
+}
+
 @media (max-width: 768px){
     .cart{
         position:relative;
         right: 9%;
+        top: 5px;
     }
 }

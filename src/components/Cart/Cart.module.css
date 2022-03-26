@@ -1,11 +1,21 @@
 .container{
+    background-color: var(--green);
     display:flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    width: 90vw;
-    margin:0 auto;
+    /* width: 90vw; */
+    width: 100%;
+    /* margin:0 auto; */
     position:relative;
-    top:120px; 
-    margin-bottom: 140px;  
+    top:9.5vh;
+    height: 90.5vh; 
+}
+
+.title{
+    position: relative;
+    top: 220px;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
 }

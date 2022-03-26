@@ -33,16 +33,22 @@
     list-style: none;
 }
 
-.navBar__links a{
+.navBar__links .navBar__linksTo{
     text-decoration: none;
     color: white;
     font-size: 0.9rem;
     font-weight: 500;
 }
 
+.navBar__links .navBar__linksToActive{
+    text-decoration: none;
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 .navBar .mobileNavigation{
     display:none;
-    background-color: aqua;
 }
 
 /********** queries **********/

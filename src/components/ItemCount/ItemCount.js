@@ -3,7 +3,7 @@ import styles from './ItemCount.module.css'
 
 const ItemCount = ({stock, initial}) => {
   const [count, setCount] = useState(initial);
-  const {container, countContainer} = styles;
+  const {container, countContainer, cart__button, cartSum__button} = styles;
 
   const onAdd = () => {
     alert(`Agregaste ${count} items al carrito`)
@@ -18,6 +18,7 @@ const ItemCount = ({stock, initial}) => {
     <div className = {container}>
         <div className = {countContainer}>
             <button
+            className = {cartSum__button}
             onClick={() => handleProduct(-1)}
             disabled={count === initial ? true : false}
             >
@@ -25,13 +26,14 @@ const ItemCount = ({stock, initial}) => {
             </button>
             <span>{count}</span>
             <button
+            className = {cartSum__button}
             onClick={() => handleProduct(+1)}
             disabled={count === stock ? true : false}
             >
             +
             </button>
         </div>
-        <button onClick={onAdd}>Agregar al carrito</button>
+        <button className = {cart__button} onClick={onAdd}>Agregar al carrito</button>
     </div>
   );
 };

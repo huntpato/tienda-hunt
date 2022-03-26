@@ -6,8 +6,10 @@ import styles from "./ItemList.module.css"
 
 const ItemList = () => {
   const {container}=styles
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const {categoryId} = useParams()
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const ItemList = () => {
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
     }
-  }, [categoryId]);
+  },[categoryId]);
 
   return(
       <div className={container}>

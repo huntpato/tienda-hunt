@@ -1,5 +1,6 @@
 import React from 'react';
 import {MdShoppingCart} from 'react-icons/md'
+import { NavLink } from 'react-router-dom';
 import styles from './CartWidget.module.css'
 
 const CartWidget = () => {
@@ -8,7 +9,9 @@ const CartWidget = () => {
 
   return (
     <>
-        <MdShoppingCart className={styles.cart} style={styleIcon}/>
+        <NavLink  to="/carrito" className={styles.cart}>
+          <MdShoppingCart style={styleIcon}/>
+        </NavLink>
     </>
   )
 }

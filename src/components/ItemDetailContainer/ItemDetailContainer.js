@@ -12,17 +12,10 @@ const ItemDetailContainer = () => {
     const {itemId} = useParams()
     
     useEffect(() => {
-      if(itemId){
         getFetch
         .then((resp) => setProduct(resp.find(p => p.id === itemId)))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
-      }else{
-        getFetch
-        .then((resp) => setProduct(resp.find(p => p.id === '1')))
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-      }
     },[itemId]);
   
   return (

@@ -4,18 +4,19 @@ import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({product}) => {
 
-    const{container, detailcard, detailcard__title, detailcard__images, detailcard__description, detailcard__price} = styles;
+    const{container, detailcard, detailcard__category, detailcard__images, detailcard__description, detailcard__price} = styles;
 
   return (
     <div className={container}>
+        <img className={detailcard__images} src={product.src} alt={product.pictureAlt}/>
         <div className={detailcard}>
-            <span className={detailcard__title}>soy el detalle del producto</span>
             <h6>{product.title}</h6>
+            <span className={detailcard__category}>Categoria: {product.category}</span>
+            <hr/>
             <p className={detailcard__description}>{product.description}</p>
-            <p className={detailcard__price}>$ {product.price}</p>
+            <p className={detailcard__price}>Precio por unidad: $ {product.price}</p>
             <ItemCount stock = {5} initial = {1}/>
         </div>
-        <img className={detailcard__images} src={product.src} alt={product.pictureAlt}/>
     </div>
   )
 }
