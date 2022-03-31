@@ -17,12 +17,12 @@ const Routesapp = () => {
         />
         <Route
           path="/category/:categoryId"
-          element={<ItemListContainer greeting="* Bienvenido al viveruski *" />}
+          element={<ItemListContainer/>}
         />
         <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
-        <Route path="/carrito" element={<Cart/>}/>
+        <Route path="/cart" element={<Cart/>}/>
         <Route path="/notfound" element={<NotFound/>}/>
-        <Route path='/*' element={<Navigate to='/notfound' replace/>}/>
+        <Route path="/*" element={<Navigate to='/notfound' replace/>}/>
       </Routes>
     </BrowserRouter>
   );

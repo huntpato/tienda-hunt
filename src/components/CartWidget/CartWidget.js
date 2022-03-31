@@ -9,7 +9,7 @@ const CartWidget = () => {
 
   return (
     <>
-        <NavLink  to="/carrito" className={styles.cart}>
+        <NavLink to="/cart" className={styles.cart}>
           <MdShoppingCart style={styleIcon}/>
         </NavLink>
     </>
