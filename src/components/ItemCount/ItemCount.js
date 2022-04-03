@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { CartContext } from "../../context/CartContext";
 import ItemDetailButtons from "../ItemDetailButtons/ItemDetailButtons";
 import styles from "./ItemCount.module.css";
 
 const ItemCount = ({ stock, initial, handleCount, product, count }) => {
   
-  const { container, countContainer, cart__button, cartSum__button } = styles;
-  const [open, setOpen] = useState(false);
+  const { container, countContainer, cart__button, cartSum__button } = styles
+
+  const [ open, setOpen ] = useState(false)
+
+  const { addToCart } = useContext(CartContext)
 
   const onAdd = () => {
+    addToCart(({
+      item: product.title,
+      id: product.id,
+      price: product.price,
+      quantity: count
+    }))
     setOpen(true);
   };
 

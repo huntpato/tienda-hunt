@@ -2,7 +2,7 @@
 .container{
     background-color: white;
     border-radius: 15px;
-    box-shadow: 3px 3px 9px 1px rgba(130,130,130,0.15);
+    /* box-shadow: 3px 3px 9px 1px rgba(130,130,130,0.15); */
     display:flex;
     flex-direction: row;
     width:100%;
