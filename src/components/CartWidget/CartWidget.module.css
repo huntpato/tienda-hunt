@@ -1,12 +1,24 @@
+.container{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
 .cart{
     position:relative;
     top:5px;
 }
 
+.container span{
+    color: var(--green);
+    font-size: 0.9rem;
+}
+
 @media (max-width: 768px){
-    .cart{
+
+    .container{
         position:relative;
         right: 9%;
-        top: 5px;
     }
+
 }

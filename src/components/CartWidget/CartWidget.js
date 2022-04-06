@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {MdShoppingCart} from 'react-icons/md'
 import { NavLink } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 import styles from './CartWidget.module.css'
 
 const CartWidget = () => {
 
-  const styleIcon = { color: "white", fontSize: "1.5em" }
+  const styleIcon = { color: "white", fontSize: "1.5rem" }
+  const {container, cart} = styles
+
+  const { cartQuantity } = useContext(CartContext);
 
   return (
-    <>
-        <NavLink to="/cart" className={styles.cart}>
+    <div className={container}>
+        <NavLink to="/cart" className={cart}>
           <MdShoppingCart style={styleIcon}/>
         </NavLink>
-    </>
+        {cartQuantity > 0 && <span> ({cartQuantity})</span>}
+    </div>
   )
 }
 

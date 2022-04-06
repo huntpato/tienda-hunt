@@ -17,7 +17,7 @@ const ItemDetail = ({ product }) => {
   const handleCount = (num) => {
     setCount(count + num);
   };
-
+ 
   return (
     <div className={container}>
       <img

@@ -13,37 +13,41 @@ const Cart = () => {
     itemDetail,
     emptyButton,
     backButton,
-    deleteIcon
+    deleteIcon,
+    container__total
   } = styles;
 
-  const { cartList, clearCart, removeItem } = useContext(CartContext);
+  const { cartList, cartTotal, clearCart, removeItem } = useContext(CartContext);
 
   return (
     <div className={container}>
-      {cartList.length === 0 ? (
+      {
+        cartList.length <= 0 &&
         <>
           <h6>El carrito no tiene productos</h6>
           <Link to="/">
             <button className={backButton}>Volver</button>
           </Link>
         </>
-      ) : (
+      }
+      {
+        cartList.length > 0 &&
         <>
           {cartList.map((prod) => {
             return (
-              <div className={container__card}>
-                <div key={prod.id} className={container__product}>
+              <div key={prod.id} className={container__card}>
+                <div  className={container__product}>
                   <div className={item}>
                     <p> Item:</p>
                     <span>{prod.item}</span>
                   </div>
                   <div className={itemDetail}>
-                    <p> Precio:</p>
-                    <span>$ {prod.price}</span>
-                  </div>
-                  <div className={itemDetail}>
                     <p> Cantidad:</p>
                     <span> {prod.quantity} </span>
+                  </div>
+                  <div className={itemDetail}>
+                    <p> Precio:</p>
+                    <span>$ {prod.price}</span>
                   </div>
                   <div className={itemDetail}>
                     <p> Sub total:</p>
@@ -57,11 +61,15 @@ const Cart = () => {
               </div>
             );
           })}
+          <div className={container__total}>
+            <p> Total:</p>
+            <span>$ {cartTotal}</span>
+          </div>
           <button className={emptyButton} onClick={clearCart}>
             Vaciar Carrito
           </button>
         </>
-      )}
+      }
     </div>
   );
 };
