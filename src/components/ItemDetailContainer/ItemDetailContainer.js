@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch } from "../../helpers/getFetch";
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 import ItemDetail from "../ItemDetail/ItemDetail";
 import styles from "./ItemDetailContainer.module.css";
+// import { getFetch } from "../../helpers/getFetch";
 
 const ItemDetailContainer = () => {
   const { container } = styles;
@@ -11,12 +12,22 @@ const ItemDetailContainer = () => {
 
   const { itemId } = useParams();
 
-  useEffect(() => {
+  useEffect(() =>{
+    const db = getFirestore()
+    const queryProd = doc( db, 'products', itemId )
+
+    getDoc(queryProd)
+    .then(resp => setProduct( { id:resp.id, ...resp.data()} ))
+    .catch((err) => console.log(err))
+    .finally(() => setLoading(false))
+  },[itemId])
+
+  /* useEffect(() => {
     getFetch
       .then((resp) => setProduct(resp.find((p) => p.id === itemId)))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, [itemId]);
+  }, [itemId]); */
 
   return (
     <div className={container}>

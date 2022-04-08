@@ -21,12 +21,8 @@ const CartContextProvider = ({ children }) => {
   }, [cartList])
   
   const isInCart = (id) => {
-    const item = cartList.find((prod) => prod.id === id);
-    if (item === undefined) {
-      return false;
-    } else {
-      return true;
-    }
+    const item = cartList.some((prod) => prod.id === id);
+    return item
   };
 
   const addToCart = (product) => {
