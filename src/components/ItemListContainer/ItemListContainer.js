@@ -3,7 +3,6 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import styles from "./ItemListContainer.module.css";
-// import { getFetch } from "../../helpers/getFetch";
 
 const ItemListContainer = ({ greeting }) => {
   const { container, title } = styles;
@@ -32,22 +31,6 @@ const ItemListContainer = ({ greeting }) => {
     }
 
   },[categoryId])
-
-  /* useEffect(() => {
-    if (categoryId) {
-      getFetch
-        .then((resp) =>
-          setProducts(resp.filter((product) => product.category === categoryId))
-        )
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    } else {
-      getFetch
-        .then((resp) => setProducts(resp))
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    }
-  }, [categoryId]); */
 
   return (
     <div className={container}>

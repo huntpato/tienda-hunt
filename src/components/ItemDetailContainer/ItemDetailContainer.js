@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore } from 'firebase/firestore'
 import ItemDetail from "../ItemDetail/ItemDetail";
 import styles from "./ItemDetailContainer.module.css";
-// import { getFetch } from "../../helpers/getFetch";
 
 const ItemDetailContainer = () => {
   const { container } = styles;
@@ -21,13 +20,6 @@ const ItemDetailContainer = () => {
     .catch((err) => console.log(err))
     .finally(() => setLoading(false))
   },[itemId])
-
-  /* useEffect(() => {
-    getFetch
-      .then((resp) => setProduct(resp.find((p) => p.id === itemId)))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
-  }, [itemId]); */
 
   return (
     <div className={container}>

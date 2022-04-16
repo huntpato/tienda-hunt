@@ -107,21 +107,47 @@
     font-size: 2rem;
 }
 
+/********* container buttons *********/
+
+.container__buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
 /********* empty button *********/
 
 .emptyButton{
-    /* align-self: flex-end; */
     border: none;
-    background-color: var(--green);
+    background-color: var(--main-color);
     border-radius: 25px;
     cursor: pointer;
-    padding: 6px 15px 8px 15px;
+    padding: 6px 20px 8px 20px;
     color: white;
     font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
-    margin-top: 10px;
 }
+
+/********* order button *********/
+
+.orderButton{
+    border: none;
+    background-color: var(--green);
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 6px 20px 8px 20px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/********* back button *********/
 
 .backButton{
     border: none;
@@ -135,7 +161,6 @@
     text-align: center;
     margin-top: 20px;
 }
-
 
 /********* queries ********/
 
