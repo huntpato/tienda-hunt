@@ -8,103 +8,19 @@
     top:120px;
 }
 
-.container__card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:100%
-}
+/********* back button *********/
 
-.container__product{
-    background-color: white;
-    border-radius: 30px;
-    width:96%;
-    padding: 14px 20px 14px 20px;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-/********* item  **********/
-
-.item{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    width:30%;
-    /* background-color: aquamarine; */
-}
-
-.item p{
-    color:var(--main-color);
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    margin-right: 8px;
-}
-
-.item span{
-    color:var(--main-color);
-    font-size: 0.9rem;
-}
-
-/********* details cart **********/
-
-.itemDetail{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    width:23%;
-    /* background-color: blueviolet; */
-}
-
-.itemDetail p{
-    color:var(--main-color);
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    margin-right: 8px;
-}
-
-.itemDetail span{
-    color:var(--main-color);
-    font-size: 0.9rem;
-}
-
-/********* total price container *********/
-
-.container__total{
-    align-self: flex-start;
+.backButton{
+    border: none;
     background-color: var(--green);
-    border-radius: 30px;
-    width:100%;
-    padding: 12px 0px 12px 0px;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    margin: 10px 0px 5px 0px;
-}
-
-.container__total p{
-    color:var(--main-color);
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    margin-right: 8px;
-}
-
-.container__total span{
-    color:var(--main-color);
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 6px 15px 8px 15px;
+    color: white;
     font-size: 0.9rem;
     font-weight: 600;
-}
-
-/********* delete icon *********/
-
-.deleteIcon{
-    align-self: center;
-    color: var(--green);
-    cursor:pointer;
-    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /********* container buttons *********/
@@ -116,7 +32,6 @@
     justify-content: center;
     margin-top: 15px;
 }
-
 
 /********* empty button *********/
 
@@ -147,63 +62,48 @@
     margin-left: 10px;
 }
 
-/********* back button *********/
+/********* form container *********/
 
-.backButton{
-    border: none;
-    background-color: var(--green);
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 6px 15px 8px 15px;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 20px;
+.container__form{  
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.3);
+    position: fixed;
+    top:120px;
+    margin:0 auto;
+    width:40%;
+    height: 75vh;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeIcon{
+    position:absolute;
+    top:30px;
+    right: 30px;
+    color:var(--main-color);
+    cursor:pointer;
+    font-size: 1.5rem;
 }
 
 /********* queries ********/
 
 @media (max-width: 1024px){
-
+    .container__form{  
+        width:60%;
+    }
 }
 
 @media (max-width: 768px){
-    
-    .container__card{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width:100%
-    }
-
-    .container__product{
-        border-radius: 20px;
-        width:92%;
-        flex-direction: column;
-    }
-    
-    /********* item  **********/
-    
-    .item{
-        width:100%;
-        margin-bottom: 5px;
-    }
-
-    /********* details cart **********/
-    
-    .itemDetail{
-        width:100%;
-        margin-bottom: 5px;
-    }
-  
-    
+    .container__form{  
+        width:80%;
+    }  
 }
 
 @media (max-width: 480px){
-
-    .container__product{
+    .container__form{  
         width:90%;
     }
-
 }

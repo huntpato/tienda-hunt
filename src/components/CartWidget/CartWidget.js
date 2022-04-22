@@ -9,14 +9,14 @@ const CartWidget = () => {
   const styleIcon = { color: "white", fontSize: "1.5rem" }
   const {container, cart} = styles
 
-  const { cartQuantity } = useContext(CartContext);
+  const { getQuantity } = useContext(CartContext);
 
   return (
     <div className={container}>
         <NavLink to="/cart" className={cart}>
           <MdShoppingCart style={styleIcon}/>
         </NavLink>
-        {cartQuantity > 0 && <span> ({cartQuantity})</span>}
+        {getQuantity() > 0 && <span> ({getQuantity()})</span>}
     </div>
   )
 }
