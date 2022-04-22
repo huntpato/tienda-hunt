@@ -16,19 +16,12 @@ const ItemListContainer = ({ greeting }) => {
 
     const db = getFirestore()
     const queryCollection = collection( db, 'products')
+    const queryFilter = categoryId ? query( queryCollection, where( 'category', '==', categoryId )) : queryCollection
     
-    if(categoryId){
-      const queryFilter = query( queryCollection, where( 'category', '==', categoryId ))
-      getDocs(queryFilter)
+    getDocs(queryFilter)
       .then((resp)=> setProducts( resp.docs.map( (item) => ( { id: item.id, ...item.data() } ))))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
-    } else {
-      getDocs(queryCollection)
-      .then((resp)=> setProducts( resp.docs.map( (item) => ( { id: item.id, ...item.data() } ))))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false))
-    }
 
   },[categoryId])
 

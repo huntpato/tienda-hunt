@@ -5,6 +5,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import styles from "./ItemDetailContainer.module.css";
 
 const ItemDetailContainer = () => {
+  
   const { container } = styles;
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);

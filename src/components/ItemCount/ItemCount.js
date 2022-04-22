@@ -5,19 +5,19 @@ import styles from "./ItemCount.module.css";
 
 const ItemCount = ({ stock, initial, handleCount, product, count }) => {
   
-  const { container, countContainer, cart__button, cartSum__button } = styles
+  const { container, countContainer, cart__button, cartSum__button } = styles;
 
-  const [ open, setOpen ] = useState(false)
+  const [open, setOpen] = useState(false);
 
-  const { addToCart } = useContext(CartContext)
+  const { addToCart } = useContext(CartContext);
 
   const onAdd = () => {
-    addToCart(({
+    addToCart({
       item: product.title,
       id: product.id,
       price: product.price,
-      quantity: count
-    }))
+      quantity: count,
+    });
     setOpen(true);
   };
 
