@@ -1,11 +1,18 @@
-# Proyecto e-commerce / React.js Coderhouse
+## Tienda e-commerce | _React.js_ | Coderhouse
 
-El proyecto consiste en desarrollar un sitio e-commerce en React.js
+Proyecto final educativo realizado para el curso de React.js de Coderhouse.
+Desarrollo de un sitio e-commerce en React.js
 
-### `Desarrollo del proyecto`
+## Dependencies
 
-Herramientas => Visual Studio Code
+| Dependencia | Version | Funcion
+| ------ | ------ | ------ |
+| react-router-dom | 6.2.2 | Navegabilidad 
+| firebase | 9.6.10 | Base de Datos
+| react-icons | 4.3.1 | Iconos
 
-Tecnologías => React.js
+## Demo
 
-lenguajes de programación => REACT / CSS3 / JAVASCRIPT
+```sh
+https://radiant-griffin-461d87.netlify.app/
+```
